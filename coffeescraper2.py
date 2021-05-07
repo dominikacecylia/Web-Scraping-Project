@@ -4,6 +4,12 @@ import json
 import requests
 import time
 
+"""Try:
+    - storing data in csv
+    - try and catch for exception of lacking details on particular products
+    - 
+"""
+
 class CoffeeScraper:
     
     def __init__(self):
@@ -11,10 +17,11 @@ class CoffeeScraper:
 
     def search(self):
         self.driver.get('https://www.coffeedesk.pl/kawa/')
-        time.sleep(5)
+        
     
     def _get_coffee_details(self):
-        img_url = self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div/div/div[3]/div[2]/div/div[1]/div[2]/img').get_attribute('src')
+        img_url = self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div/div/div[3]//img').get_attribute('src')
+        #                                           /html/body/div[5]/div/div[2]/div/div/div[3]/div[1]/div[1]/a/img
         # price = self.driver.find_element_by_xpath('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/div[1]/div/span').text
         # origin = self.driver.find_element_by_xpath('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/ng-container/div/div[2]/div[2]/div/p').text
         print(img_url)
@@ -25,19 +32,20 @@ class CoffeeScraper:
     def scrape(self):
         self.search()
         # coffees = self.driver.find_elements_by_xpath('/html/body/div[5]/div/div[2]/div[4]') #issue as not a list
-        coffees = self.driver.find_elements_by_class_name('products-list')
+        coffees = self.driver.find_elements_by_xpath('//div[@class="products-list"]//a')
+        print(len(coffees))
 
         links = []
         for coffee in coffees:
-            link = coffee.find_element_by_tag_name('a').get_attribute('href')
+            link = coffee.get_attribute('href')
             links.append(link)
-            time.sleep(5)
+            
 
         details = []
         for idx, link in enumerate(links):
 
             self.driver.get(link)
-            time.sleep(5)
+            
 
             img_url = self._get_coffee_details()
 
