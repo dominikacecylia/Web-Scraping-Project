@@ -11,7 +11,8 @@
             "AEROPRESS",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Strawberry | mango | pineapple | banana."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/MejiaPaica-Pink.jpg?v=1620054012",
@@ -25,7 +26,8 @@
             "AEROPRESS",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Cherry | peach | shortbread."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Twumba-Pink.jpg?v=1620053900",
@@ -39,7 +41,8 @@
             "AEROPRESS",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Fruit cake | cherry | orange."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/LosRosales-Pink.jpg?v=1620053028",
@@ -53,7 +56,8 @@
             "AEROPRESS",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Pink lady | brown sugar | lemon."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/FazendaRainhaDaPaz-Pink.jpg?v=1620052517",
@@ -67,7 +71,8 @@
             "AEROPRESS",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Milk chocolate | date | hazelnut."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/TheDocks-Pink.jpg?v=1620051651",
@@ -81,7 +86,8 @@
             "AEROPRESS",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Milk chocolate | toasted nuts | tangerine."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/PenaJoja-Pink.jpg?v=1620028983",
@@ -97,7 +103,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate | honeysuckle | peach."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/LasMorenitas-Pink.jpg?v=1620028729",
@@ -113,7 +120,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Apple | raisin | chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Sweet2-Pink.jpg?v=1620028441",
@@ -129,7 +137,8 @@
             "AEROPRESS",
             "227G",
             "1KG"
-        ]
+        ],
+        "flavor": "Sugarcane molasses | milk chocolate | almond."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Mauricio-Pink.jpg?v=1620028078",
@@ -141,7 +150,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Cantaloupe melon | caramel."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/GoraKone-Pink.jpg?v=1620027754",
@@ -153,7 +163,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Lime starburst | peach | jasmine."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/BarraEstate-Pink.jpg?v=1620027410",
@@ -165,7 +176,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Dried strawberries | praline."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/FincaLaBolsa-Pink.jpg?v=1619608088",
@@ -179,7 +191,8 @@
             "AEROPRESS",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Dark chocolate | cherry | pecan."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/DirectoDaRoca-Pink.jpg?v=1619607122",
@@ -195,7 +208,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Walnut | pear | syrupy."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/HugoHernanLopez-Pink.jpg?v=1619603291",
@@ -211,7 +225,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Apricot | butterscotch | jammy."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Gatare-Pink.jpg?v=1619602917",
@@ -227,7 +242,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Dried mango | red apple | jammy mouthfeel."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/KimondoPB-Pink.jpg?v=1619602442",
@@ -243,7 +259,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Strawberry Birthday Cake!"
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Izuba-Pink.jpg?v=1618847527",
@@ -257,7 +274,8 @@
             "AEROPRESS",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Blackcurrant | biscuit | butter."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/SulDeMinas-Pink.jpg?v=1618825496",
@@ -271,7 +289,8 @@
             "AEROPRESS",
             "200G",
             "1KG"
-        ]
+        ],
+        "flavor": "Dates | nougat | lychee."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Firehouse-Pink.jpg?v=1618824396",
@@ -287,7 +306,8 @@
             "ESPRESSO",
             "200G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate orange | forest fruits | cinnamon."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/TheMountBlend-Pink.jpg?v=1618823448",
@@ -303,7 +323,8 @@
             "ESPRESSO",
             "200G",
             "1KG"
-        ]
+        ],
+        "flavor": "Red grapes | caramel | milk chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/FullsteamEspresso-Pink.jpg?v=1618822598",
@@ -319,7 +340,8 @@
             "ESPRESSO",
             "200G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate | apricot | nectarine."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/JorgeBarakat-Pink.jpg?v=1618743446",
@@ -331,7 +353,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Strawberry | meringue."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/DiegoSamuel-Pink_23781dab-2095-4a5a-bf78-009ac374785f.jpg?v=1618740548",
@@ -343,7 +366,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Ripe peach | lychee | strawberry milkshake."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Fikru-Pink.jpg?v=1617954905",
@@ -358,7 +382,8 @@
             "ESPRESSO",
             "AEROPRESS",
             "227G"
-        ]
+        ],
+        "flavor": "Sweet candied redcurrant | black tea | orange | caramel."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Banka-Pink.jpg?v=1617956331",
@@ -374,7 +399,8 @@
             "ESPRESSO",
             "250G",
             "1 KG"
-        ]
+        ],
+        "flavor": "Apple | lime | brown sugar."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Pinhalzinho-Pink.jpg?v=1617178699",
@@ -390,7 +416,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Peach | melon | floral."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Kilimbi-Pink.jpg?v=1617178365",
@@ -406,7 +433,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Blood orange | caramel | red apples."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/LaDivisa-Pink.jpg?v=1616747569",
@@ -422,7 +450,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Caramel | blackcurrant | jammy."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Ibanda-Pink.jpg?v=1616746534",
@@ -438,7 +467,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Raspberry | kirsch | creamy."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/DaliaFlores-Pink.jpg?v=1616745674",
@@ -450,7 +480,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Damson plum | fudge."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Bwenda578-Pink.jpg?v=1616745211",
@@ -462,7 +493,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Blackberry jam | mango."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Chelbesa-Pink.jpg?v=1616417661",
@@ -478,7 +510,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Sicilian blood orange | gooseberry | bergamot."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Katanda-Pink.jpg?v=1615796846",
@@ -494,7 +527,8 @@
             "AEROPRESS",
             "227G",
             "1KG"
-        ]
+        ],
+        "flavor": "Bright tangerine | sweet grape acidity."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/PearlMountain-Pink.jpg?v=1615797028",
@@ -510,7 +544,8 @@
             "AEROPRESS",
             "227G",
             "1KG"
-        ]
+        ],
+        "flavor": "Syrupy | green | purple fruit pastels."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/FincaLasBrumas-Pink.jpg?v=1615796895",
@@ -524,7 +559,8 @@
             "AEROPRESS",
             "200G",
             "1KG"
-        ]
+        ],
+        "flavor": "Apple | stone-fruit | hazelnut."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/CocoaNibs-Pink.jpg?v=1615796591",
@@ -540,7 +576,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Cocoa | plum | marmalade."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/TigerStripes-Pink.jpg?v=1615797192",
@@ -556,7 +593,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Tobacco | spice | pepper | chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Bautista-Pink.jpg?v=1615796484",
@@ -572,7 +610,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Raspberry jam | toffee apple."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/FincaLaMontania-Pink.jpg?v=1615796711",
@@ -588,7 +627,8 @@
             "ESPRESSO",
             "250G",
             "1 KG"
-        ]
+        ],
+        "flavor": "Chocolate | lime | brown sugar."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/LoseLopez-Pink.jpg?v=1615796817",
@@ -600,7 +640,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Pineapple | sparkling elderflower."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Stovepipe-pink.jpg?v=1615797149",
@@ -616,7 +657,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate | dried fruits | soft brown sugar."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/TopHat-Pink.jpg?v=1615797201",
@@ -632,7 +674,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Apricot jam | malted biscuits | caramel finish."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Propelloer-Pink.jpg?v=1615797051",
@@ -648,7 +691,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Tropical fruits | juicy mouthfeel | lingering sweetness."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Boater-Pink.jpg?v=1615796508",
@@ -664,7 +708,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Dark chocolate | pecans | baking spices."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Deerstalker-Pink.jpg?v=1615796643",
@@ -680,7 +725,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate | brazil nuts | caramel."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Kibingo-Pink.jpg?v=1615796852",
@@ -692,7 +738,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Red currant | vanilla."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Agualinda-Pink.jpg?v=1615796449",
@@ -708,7 +755,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Passion fruit | strawberry yoghurt | violet."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/SanErnesto-Pink.jpg?v=1615797086",
@@ -724,7 +772,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Caramel | dark chocolate | toffee."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Inza-Pink.jpg?v=1615796799",
@@ -740,7 +789,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Apple | peach | pomegranate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Mubuga-Pink.jpg?v=1615796983",
@@ -752,7 +802,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Cranberry jam | tea rose."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Toque-Pink.jpg?v=1615797209",
@@ -768,7 +819,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Berry compote | dark chocolate | vibrant acidity."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/FridayStreet-Pink.jpg?v=1615796737",
@@ -784,7 +836,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate | caramel | red fruits."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/WomensWashed-Pink.jpg?v=1615797252",
@@ -800,7 +853,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Apricot | lime | caramel."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Buesaco-Pink.jpg?v=1615796556",
@@ -812,7 +866,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Stewed apricot | maple syrup."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Maridadi-Pink.jpg?v=1615796962",
@@ -828,7 +883,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Red berries | caramel | orange."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Waykan-Pink.jpg?v=1615797244",
@@ -840,7 +896,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Greengage | brown sugar | smooth."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/RockoMountain-Pink.jpg?v=1615797072",
@@ -856,7 +913,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Blueberry | strawberry | cream."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/SeasonalDecaf-Pink.jpg?v=1615797109",
@@ -872,7 +930,8 @@
             "ESPRESSO",
             "227G",
             "500G"
-        ]
+        ],
+        "flavor": "Chocolate | red currant | lime."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Migoti-Pink.jpg?v=1615796975",
@@ -888,7 +947,8 @@
             "ESPRESSO",
             "250G",
             "1 KG"
-        ]
+        ],
+        "flavor": "Rum | raisin | floral | sweet."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Planadas-Pink.jpg?v=1615797045",
@@ -904,7 +964,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Cherry | raisin | dark chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/OsiasCarrasco-Pink.jpg?v=1616524703",
@@ -916,7 +977,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Passionfruit | pink grapefruit | wild honey."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/UpHill-Pink.jpg?v=1615817444",
@@ -932,7 +994,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Tangerine | almond | hazelnut | milk chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Decaf_Campbell_-Pink.jpg?v=1615796614",
@@ -944,7 +1007,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Milk chocolate | peanut brittle | candied pecan."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/LosMilagos-Pink.jpg?v=1615796936",
@@ -960,7 +1024,8 @@
             "ESPRESSO",
             "250G",
             "1 KG"
-        ]
+        ],
+        "flavor": "Milk chocolate | orange zest | almond."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Mwami-Pink.jpg?v=1615796997",
@@ -976,7 +1041,8 @@
             "ESPRESSO",
             "227G",
             "1KG"
-        ]
+        ],
+        "flavor": "Blood orange | toffee."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/BosqueLya-Pink.jpg?v=1615796535",
@@ -992,7 +1058,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Hazelnut | plum | milk chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Fortisgreen-Pink.jpg?v=1615796730",
@@ -1004,7 +1071,8 @@
             "WHOLE-BEAN",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Terry's chocolate orange | praline."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Complex-Pink.jpg?v=1615796601",
@@ -1019,7 +1087,8 @@
             "STOVE-TOP",
             "ESPRESSO",
             "250G"
-        ]
+        ],
+        "flavor": "Cranberries | toffee | plum."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Decaf_Common_-Pink.jpg?v=1615796629",
@@ -1033,7 +1102,8 @@
             "AEROPRESS",
             "ESPRESSO",
             "STOVE-TOP"
-        ]
+        ],
+        "flavor": "Apple | brown sugar | chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Strong-Pink2.jpg?v=1615797158",
@@ -1048,7 +1118,8 @@
             "ESPRESSO",
             "STOVE-TOP",
             "250G"
-        ]
+        ],
+        "flavor": "Toasted almonds | chocolate cherry."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Sweet-Pink.jpg?v=1615797168",
@@ -1063,7 +1134,8 @@
             "STOVE-TOP",
             "ESPRESSO",
             "250G"
-        ]
+        ],
+        "flavor": "Honey | nectarine | chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Bright-Pink.jpg?v=1615796546",
@@ -1078,7 +1150,8 @@
             "STOVE-TOP",
             "ESPRESSO",
             "250G"
-        ]
+        ],
+        "flavor": "Orange | peach iced tea | honeycomb."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/HoueParty-Pink.jpg?v=1615796774",
@@ -1094,7 +1167,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Rich chocolate | sweet cherries."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/AdventurerBlend-Pink_972a006c-4832-4fee-861b-22821b335499.jpg?v=1615796415",
@@ -1110,7 +1184,8 @@
             "ESPRESSO",
             "227G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate | nuts | citrus."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/ExplorerBlend-Pink_518d281b-0f72-42e8-97fe-d7215fb1107f.jpg?v=1615796680",
@@ -1126,7 +1201,8 @@
             "AEROPRESS",
             "227G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate | hazelnut | orange."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Decaf_Mission_-Pink.jpg?v=1615796623",
@@ -1142,7 +1218,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Apple | hazelnut | chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Pivot-Pink.jpg?v=1615797038",
@@ -1158,7 +1235,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Yellow plum | apple | caramel | nuts."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/SeasonalEspresso-Pink.jpg?v=1615797117",
@@ -1174,7 +1252,8 @@
             "ESPRESSO",
             "250G",
             "1 KG"
-        ]
+        ],
+        "flavor": "Chocolate | orange | bright."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Decaf-Pink_7a1c2f6c-5060-4637-b185-f1b111cea9cc.jpg?v=1615796636",
@@ -1190,7 +1269,8 @@
             "ESPRESSO",
             "250G",
             "1 KG"
-        ]
+        ],
+        "flavor": "Honeycomb | maple | pecans."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Decaf-Pink.jpg?v=1615796787",
@@ -1206,7 +1286,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate biscuits."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Bells-Pink.jpg?v=1615796492",
@@ -1222,7 +1303,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Tangerine | almond | hazelnut | milk chocolate."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Granary-Pink.jpg?v=1615796766",
@@ -1238,7 +1320,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Chocolate | hazelnut | caramel."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/DaybreakBlend-Pink.jpg?v=1615796608",
@@ -1254,7 +1337,8 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Dark chocolate | treacle."
     },
     {
         "img_url": "https://cdn.shopify.com/s/files/1/0256/7028/7456/products/Decaf-Pink_b8832373-af6d-4894-8409-49ff2e0c78f0.jpg?v=1615797141",
@@ -1270,6 +1354,7 @@
             "ESPRESSO",
             "250G",
             "1KG"
-        ]
+        ],
+        "flavor": "Dark chocolate | cherry | brown sugar."
     }
 ]

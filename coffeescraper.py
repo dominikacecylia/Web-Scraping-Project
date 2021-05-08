@@ -20,6 +20,7 @@ class CoffeeScraper:
         origin = self.driver.find_element_by_xpath('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/ng-container/div/div[2]/div[2]/div/p').text
         weight = self._get_details_with_possible_null('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/product-form/product-form-selectors/div[2]/ng-container/ul/li[1]/div')
         process = self.driver.find_element_by_xpath('/html/body/main/div/product-details/ng-container/div/ul/li[2]/div/div[2]/p').text
+        flavor = self.driver.find_element_by_xpath('//product-page-above-fold/div/div[2]/ng-container/div/div[1]/div[2]/div').text
 
         ground_button = self.driver.find_element_by_xpath('//*[@id="productFormSelectors"]//li[2]/div')
         self.driver.execute_script("arguments[0].click();", ground_button)
@@ -29,12 +30,12 @@ class CoffeeScraper:
         grind_types = []
         for grind in grinds:
             grind_types.append(grind.text)
-            print(grind.text)
+            # print(grind.text)
 
         # print(img_url)
         # print(price)
         # print()
-        return img_url, price, origin, weight, process, grind_types
+        return img_url, price, origin, weight, process, flavor, grind_types
 
     def scrape(self):
         self.search()
@@ -50,7 +51,7 @@ class CoffeeScraper:
 
             self.driver.get(link)
 
-            img_url, price, origin, weight, process, grind_types = self._get_coffee_details()
+            img_url, price, origin, weight, process, flavor, grind_types = self._get_coffee_details()
 
             # if '.png' in img_url:
             #     ext = 'png'
@@ -64,7 +65,8 @@ class CoffeeScraper:
                 'origin' : origin,
                 'weight' : weight,
                 'process' : process,
-                'grind_types' : grind_types
+                'grind_types' : grind_types,
+                'flavor' : flavor
             }
             coffees.append(coffee)
 
