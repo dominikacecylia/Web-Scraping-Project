@@ -2,6 +2,7 @@ from selenium import webdriver
 from pprint import pprint
 import json
 import requests
+import time
 # check out the one below for going down the page
 # from selenium.webdriver import common.actions.ActionChains
 
@@ -17,20 +18,23 @@ class CoffeeScraper:
         img_url = self.driver.find_element_by_xpath('//img').get_attribute('src')
         price = self.driver.find_element_by_xpath('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/div[1]/div/span').text
         origin = self.driver.find_element_by_xpath('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/ng-container/div/div[2]/div[2]/div/p').text
-        # weight = self.driver.find_element_by_xpath('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/product-form/product-form-selectors/div[2]/ng-container/ul/li[1]/div').text
-        # grounds = self.driver.find_elements_by_xpath('//*[@id="productFormSelectors"]/div[1]/ng-container/div/ul/li')
         weight = self._get_details_with_possible_null('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/product-form/product-form-selectors/div[2]/ng-container/ul/li[1]/div')
+        process = self.driver.find_element_by_xpath('/html/body/main/div/product-details/ng-container/div/ul/li[2]/div/div[2]/p').text
 
-        # ground_types = []
-        # for ground in grounds:
-        #     ground_type = ground.find_element_by_xpath('//*[@id="productFormSelectors"]/div[1]/ng-container/div/ul/li[1]/div').text
-        #     ground_types.append(ground_type)
+        ground_button = self.driver.find_element_by_xpath('//*[@id="productFormSelectors"]//li[2]/div')
+        self.driver.execute_script("arguments[0].click();", ground_button)
+        time.sleep(1)
+        grinds = self.driver.find_elements_by_xpath('//ul[@class="flex row-wrap align-center justify-left cell-l--s cell-r--s"]//li')  
+        
+        grind_types = []
+        for grind in grinds:
+            grind_types.append(grind.text)
+            print(grind.text)
 
-        # add weight and roast and any other such info
         # print(img_url)
         # print(price)
         # print()
-        return img_url, price, origin, weight
+        return img_url, price, origin, weight, process, grind_types
 
     def scrape(self):
         self.search()
@@ -46,7 +50,7 @@ class CoffeeScraper:
 
             self.driver.get(link)
 
-            img_url, price, origin, weight = self._get_coffee_details()
+            img_url, price, origin, weight, process, grind_types = self._get_coffee_details()
 
             # if '.png' in img_url:
             #     ext = 'png'
@@ -58,7 +62,9 @@ class CoffeeScraper:
                 'img_url' : img_url,
                 'price' : price,
                 'origin' : origin,
-                'weight' : weight
+                'weight' : weight,
+                'process' : process,
+                'grind_types' : grind_types
             }
             coffees.append(coffee)
 
