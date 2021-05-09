@@ -10,7 +10,7 @@ import time
     - 
 """
 
-class CoffeeScraper:
+class CoffeeScraper2:
     
     def __init__(self):
         self.driver = webdriver.Chrome()
@@ -22,12 +22,15 @@ class CoffeeScraper:
     def _get_coffee_details(self):
         img_url = self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div/div/div[3]//img').get_attribute('src')
         #                                           /html/body/div[5]/div/div[2]/div/div/div[3]/div[1]/div[1]/a/img
-        # price = self.driver.find_element_by_xpath('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/div[1]/div/span').text
-        # origin = self.driver.find_element_by_xpath('/html/body/main/div/div[2]/product-page-above-fold/div/div[2]/ng-container/div/div[2]/div[2]/div/p').text
-        print(img_url)
+        price = self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div/div/div[3]/div[3]/div[1]/div[1]/span[3]').text
+
+        description_elements = self.driver.find_elements_by_xpath('//*[@id="description"]/span/div[1]')
+        description = []
+        for element in description_elements:
+            description.append(element.text)
+
         # print(price)
-        # print()
-        return img_url
+        return img_url, price, description
 
     def scrape(self):
         self.search()
@@ -47,7 +50,7 @@ class CoffeeScraper:
             self.driver.get(link)
             
 
-            img_url = self._get_coffee_details()
+            img_url, price, description = self._get_coffee_details()
 
             if '.png' in img_url:
                 ext = 'png'
@@ -56,9 +59,9 @@ class CoffeeScraper:
             self.download_file(img_url, f'data/pictures/c2/kawa_{idx}.{ext}')
 
             detail = {
-                'img_url' : img_url#,
-                # 'price' : price,
-                # 'origin' : origin
+                'img_url' : img_url,
+                'price' : price,
+                'description' : description
             }
             details.append(detail)
 
@@ -75,5 +78,5 @@ class CoffeeScraper:
             f.write(response.content)
 
 
-scraper = CoffeeScraper()
-scraper.scrape()
+scraper2 = CoffeeScraper2()
+scraper2.scrape()
