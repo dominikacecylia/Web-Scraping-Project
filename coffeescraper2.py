@@ -15,59 +15,59 @@ class CoffeeScraper2:
     def __init__(self):
         self.driver = webdriver.Chrome()
 
-    def search(self):
-        # self.driver.get('https://www.coffeedesk.pl/kawa/filters/on-page/120/')
-        self.driver.get('https://www.coffeedesk.pl/kawa/')
+    def search(self, url):
+        self.driver.get(url)
         
     
     def _get_coffee_details(self):
         img_url = self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div/div/div[3]//img').get_attribute('src')
         price = self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div/div/div[3]/div[3]/div[1]/div[1]/span[3]').text
-
         description = self._get_details_in_table('//*[@id="description"]/span/div[1]')
+
         self._click_on_button('//*[@id="tabs"]/ul/li[2]/a/span')
         
         coffee_details = self._get_details_in_table('//*[@id="attributes"]/table')
-
         return img_url, price, description, coffee_details
 
     def scrape(self):
-        self.search()
-        """Tutaj skonfigurowac petle do """
+        urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/0/','https://www.coffeedesk.pl/kawa/filters/on-page/120/1/') 
+        #'https://www.coffeedesk.pl/kawa/filters/on-page/120/2/') #,'https://www.coffeedesk.pl/kawa/filters/on-page/120/3/'
+        # 'https://www.coffeedesk.pl/kawa/filters/on-page/120/4/','https://www.coffeedesk.pl/kawa/filters/on-page/120/5/'#
+        # 'https://www.coffeedesk.pl/kawa/filters/on-page/120/6/','https://www.coffeedesk.pl/kawa/filters/on-page/120/7/')
+        for url in urls:
+            self.search(url)
 
-        coffees = self.driver.find_elements_by_xpath('//div[@class="products-list"]//a')
-        print(len(coffees))
+            coffees = self.driver.find_elements_by_xpath('//div[@class="products-list"]//a')
+            print(len(coffees))
 
-        links = []
-        for coffee in coffees:
-            link = coffee.get_attribute('href')
-            links.append(link)
-            
+            links = [coffee.get_attribute('href') for coffee in coffees]
+            # for coffee in coffees:
+            #     link = coffee.get_attribute('href')
+            #     links.append(link)
+                
 
-        details = []
-        for idx, link in enumerate(links):
+            details = []
+            for idx, link in enumerate(links):
 
-            self.driver.get(link)
-            
+                self.driver.get(link)
+                img_url, price, description, coffee_details = self._get_coffee_details()
 
-            img_url, price, description, coffee_details = self._get_coffee_details()
+                if '.png' in img_url:
+                    ext = 'png'
+                else:
+                    ext = 'jpg'
+                self._download_file(img_url, f'data/pictures/c2/kawa_{idx}.{ext}')
 
-            if '.png' in img_url:
-                ext = 'png'
-            else:
-                ext = 'jpg'
-            self._download_file(img_url, f'data/pictures/c2/kawa_{idx}.{ext}')
+                detail = {
+                    'img_url' : img_url,
+                    'price' : price,
+                    'coffee_details' : coffee_details,
+                    'description' : description
+                }
+                details.append(detail)
 
-            detail = {
-                'img_url' : img_url,
-                'price' : price,
-                'coffee_details' : coffee_details,
-                'description' : description
-            }
-            details.append(detail)
-
-        with open('data/data_pl_coffee_test.json', 'w') as f:
-            json.dump(details, f, indent=4)
+            with open('data/data_pl_coffee_part1.json', 'w') as f:
+                json.dump(details, f, indent=4)
 
 
     def scroll(self, x=0, y=10000):
