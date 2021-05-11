@@ -5,19 +5,20 @@ import requests
 import time
 
 """Try:
-    - storing data in csv
-    - try and catch for exception of lacking details on particular products
-    - use coffee name as unique coffee id and then when adding it check if its not in the list already/file 
+    - try and catch for exception of lacking details on particular products 
 """
 
 class CoffeeScraper2:
     
     def __init__(self):
         self.driver = webdriver.Chrome()
-        self.already_visited_links = [] #read the json file to add scraped links, 
-        # with open('name of my json file', 'r') as f:
-            # pass
-        #     # TODO: list comprehension to get the list of unique ids
+        self.already_visited_links = [] 
+        
+        with open('data/data_pl_coffee.json', 'r', encoding='utf-8') as json_file:
+            data_dicts = json.load(json_file)
+        self.already_visited_links = [dd['unique_id'] for dd in data_dicts] 
+        
+       # TODO: try catch for empty file
 
     def search(self, url):
         self.driver.get(url)
@@ -26,7 +27,7 @@ class CoffeeScraper2:
     def _get_coffee_details(self):
         img_url = self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div/div/div[3]//img').get_attribute('src')
         price = self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div/div/div[3]/div[3]/div[1]/div[1]/span[3]').text
-        description = [desc.text for desc in self.driver.find_elements_by_xpath('//*[@id="description"]/span/div[1]')] # TODO: change the function here
+        description = [desc.text for desc in self.driver.find_elements_by_xpath('//*[@id="description"]/span/div[1]')]
 
         self._click_on_button('//*[@id="tabs"]/ul/li[2]/a/span')
         
@@ -34,8 +35,8 @@ class CoffeeScraper2:
         return img_url, price, description, coffee_details
 
     def scrape(self):
-        urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/0/','https://www.coffeedesk.pl/kawa/filters/on-page/120/1/') 
-        # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/2/','https://www.coffeedesk.pl/kawa/filters/on-page/120/3/')
+        # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/0/','https://www.coffeedesk.pl/kawa/filters/on-page/120/1/') 
+        urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/2/','https://www.coffeedesk.pl/kawa/filters/on-page/120/3/')
         # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/4/','https://www.coffeedesk.pl/kawa/filters/on-page/120/5/')
         # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/6/','https://www.coffeedesk.pl/kawa/filters/on-page/120/7/')
         for url in urls:
@@ -61,12 +62,14 @@ class CoffeeScraper2:
                     ext = 'png'
                 else:
                     ext = 'jpg'
+                idx = idx+240
                 self._download_file(img_url, f'data/pictures/c2/kawa_{idx}.{ext}')
 
                 detail = {
                     'unique_id' : link,
                     'img_url' : img_url,
                     'price' : price,
+                    'weight' : coffee_details['Opakowanie'],
                     'coffee_details' : coffee_details, # TODO: manipulate the dictionary to get the kv pairs directly instead of dict inside dict
                     'description' : description
                 }
