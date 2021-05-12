@@ -16,4 +16,4 @@ folder with datasets in json format
 folder with picture scraped in process but not used in further processing
 
 
-Project developed as part of the AiCore fellowship.
+#### Project developed as part of the AiCore fellowship.
