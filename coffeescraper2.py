@@ -84,7 +84,7 @@ class CoffeeScraper2:
             return all_details
         except Exception:
             return {'Empty' : None}
-
+            
 
 scraper2 = CoffeeScraper2()
 scraper2.scrape()
