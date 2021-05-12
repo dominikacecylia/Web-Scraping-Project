@@ -3,8 +3,6 @@ from pprint import pprint
 import json
 import requests
 import time
-# check out the one below for going down the page
-# from selenium.webdriver import common.actions.ActionChains
 
 class CoffeeScraper:
 
@@ -30,11 +28,7 @@ class CoffeeScraper:
         grind_types = []
         for grind in grinds:
             grind_types.append(grind.text)
-            # print(grind.text)
 
-        # print(img_url)
-        # print(price)
-        # print()
         return img_url, price, origin, weight, process, flavor, grind_types
 
     def scrape(self):
@@ -53,11 +47,11 @@ class CoffeeScraper:
 
             img_url, price, origin, weight, process, flavor, grind_types = self._get_coffee_details()
 
-            # if '.png' in img_url:
-            #     ext = 'png'
-            # else:
-            #     ext = 'jpg'
-            # self.download_file(img_url, f'data/pictures/c1/coffee_{idx}.{ext}')
+            if '.png' in img_url:
+                ext = 'png'
+            else:
+                ext = 'jpg'
+            self.download_file(img_url, f'data/pictures/c1/coffee_{idx}.{ext}')
 
             coffee = {
                 'img_url' : img_url,
@@ -88,7 +82,6 @@ class CoffeeScraper:
             return text
         except Exception:
             return None
-
 
 
 scraper = CoffeeScraper()
