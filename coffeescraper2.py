@@ -4,10 +4,6 @@ import json
 import requests
 import time
 
-"""Try:
-    - try and catch for exception of lacking details on particular products 
-"""
-
 class CoffeeScraper2:
     
     def __init__(self):
@@ -19,9 +15,7 @@ class CoffeeScraper2:
                 data_dicts = json.load(json_file)
             self.already_visited_links = [dd['unique_id'] for dd in data_dicts]
         except Exception:
-            pass
-        
-       # TODO: try catch for empty file
+            continue
 
     def search(self, url):
         self.driver.get(url)
@@ -40,42 +34,28 @@ class CoffeeScraper2:
     def scrape(self):
         urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/0/','https://www.coffeedesk.pl/kawa/filters/on-page/120/1/',
         'https://www.coffeedesk.pl/kawa/filters/on-page/120/2/','https://www.coffeedesk.pl/kawa/filters/on-page/120/3/',
-        'https://www.coffeedesk.pl/kawa/filters/on-page/120/4/','https://www.coffeedesk.pl/kawa/filters/on-page/120/5/', 'https://www.coffeedesk.pl/kawa/filters/on-page/120/6/','https://www.coffeedesk.pl/kawa/filters/on-page/120/7/')
+        'https://www.coffeedesk.pl/kawa/filters/on-page/120/4/','https://www.coffeedesk.pl/kawa/filters/on-page/120/5/',
+        'https://www.coffeedesk.pl/kawa/filters/on-page/120/6/','https://www.coffeedesk.pl/kawa/filters/on-page/120/7/')
+
         details = []
 
-
         for url in urls:
-            
-            # if url != 'https://www.coffeedesk.pl/product/17414/Audun-Coffee-Drip-No-1-%3E75Procent-Rwanda-Kopakama-1Kg': # TODO: remove this link from urls
             self.search(url)
-
             coffees = self.driver.find_elements_by_xpath('//div[@class="products-list"]//a')
-            print(len(coffees))
-
             links = [coffee.get_attribute('href') for coffee in coffees]                 
-
-                        
+         
             for link in links:
                 if link in self.already_visited_links:
-                    print("Already visited this link")
                     continue
                 else:
                     self.already_visited_links.append(link)
-                
+
                 if link == 'https://www.coffeedesk.pl/product/17414/Audun-Coffee-Drip-No-1-%3E75Procent-Rwanda-Kopakama-1Kg':
                     continue
                 else:
                     self.driver.get(link)
                     print(link)
                 img_url, price, description, coffee_details = self._get_coffee_details()
-
-                # if '.png' in img_url:
-                #     ext = 'png'
-                # else:
-                #     ext = 'jpg'
-                
-                
-                # self._download_file(img_url, f'data/pictures/c2/kawa_{link}.{ext}')
 
                 detail = {
                     'unique_id' : link,
@@ -84,20 +64,10 @@ class CoffeeScraper2:
                     'description' : description,
                     **coffee_details
                 }
-
                 details.append(detail)
 
             with open('data/data_pl_test.json', 'a+') as f:
                     json.dump(details, f, indent=4)
-
-
-    def scroll(self, x=0, y=10000):
-        self.driver.execute_script(f'window.scrollBy({x}, {y})')
-
-    def _download_file(self, src_url, local_destination):
-        response = requests.get(src_url)
-        with open(local_destination, 'wb+') as f:
-            f.write(response.content)
 
     def _click_on_button(self, xpath):
         button = self.driver.find_element_by_xpath(xpath)
@@ -109,16 +79,11 @@ class CoffeeScraper2:
             details = self.driver.find_element_by_xpath(xpath)
             rows = details.find_elements_by_tag_name('tr')
             all_details = {}
-            for row in rows:
-                key, value = [e.text for e in row.find_elements_by_tag_name('td')] # TODO: try prints, try doule nesting maybe
-                all_details[key] = value
+            key, value = [e.text for e in row.find_elements_by_tag_name('td') for row in rows]
+            all_details[key] = value
             return all_details
         except Exception:
             return {'Empty' : None}
-
-
-
-
 
 
 scraper2 = CoffeeScraper2()
