@@ -12,11 +12,14 @@ class CoffeeScraper2:
     
     def __init__(self):
         self.driver = webdriver.Chrome()
-        self.already_visited_links = [] 
+        self.already_visited_links = []
         
-        with open('data/data_pl_test.json', 'r', encoding='utf-8') as json_file:
-            data_dicts = json.load(json_file)
-        self.already_visited_links = [dd['unique_id'] for dd in data_dicts] 
+        try:
+            with open('data/data_pl_test.json', 'r', encoding='utf-8') as json_file:
+                data_dicts = json.load(json_file)
+            self.already_visited_links = [dd['unique_id'] for dd in data_dicts]
+        except Exception:
+            pass
         
        # TODO: try catch for empty file
 
@@ -35,39 +38,44 @@ class CoffeeScraper2:
         return img_url, price, description, coffee_details
 
     def scrape(self):
-        # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/0/','https://www.coffeedesk.pl/kawa/filters/on-page/120/1/')
-        urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/2/','https://www.coffeedesk.pl/kawa/filters/on-page/120/3/',
-        'https://www.coffeedesk.pl/kawa/filters/on-page/120/4/','https://www.coffeedesk.pl/kawa/filters/on-page/120/5/',
-        'https://www.coffeedesk.pl/kawa/filters/on-page/120/6/','https://www.coffeedesk.pl/kawa/filters/on-page/120/7/')
+        urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/0/','https://www.coffeedesk.pl/kawa/filters/on-page/120/1/',
+        'https://www.coffeedesk.pl/kawa/filters/on-page/120/2/','https://www.coffeedesk.pl/kawa/filters/on-page/120/3/',
+        'https://www.coffeedesk.pl/kawa/filters/on-page/120/4/','https://www.coffeedesk.pl/kawa/filters/on-page/120/5/', 'https://www.coffeedesk.pl/kawa/filters/on-page/120/6/','https://www.coffeedesk.pl/kawa/filters/on-page/120/7/')
+        details = []
 
-        for url in urls: #TODO: redo the links and urls as this is the duplicate source
+
+        for url in urls:
             
-            if url != 'https://www.coffeedesk.pl/product/17414/Audun-Coffee-Drip-No-1-%3E75Procent-Rwanda-Kopakama-1Kg': # TODO: remove this link from urls
-                self.search(url)
+            # if url != 'https://www.coffeedesk.pl/product/17414/Audun-Coffee-Drip-No-1-%3E75Procent-Rwanda-Kopakama-1Kg': # TODO: remove this link from urls
+            self.search(url)
 
             coffees = self.driver.find_elements_by_xpath('//div[@class="products-list"]//a')
             print(len(coffees))
 
             links = [coffee.get_attribute('href') for coffee in coffees]                 
 
-            details = []
-            for idx, link in enumerate(links):
+                        
+            for link in links:
                 if link in self.already_visited_links:
                     print("Already visited this link")
                     continue
                 else:
                     self.already_visited_links.append(link)
                 
-                if link != 'https://www.coffeedesk.pl/product/17414/Audun-Coffee-Drip-No-1-%3E75Procent-Rwanda-Kopakama-1Kg':
+                if link == 'https://www.coffeedesk.pl/product/17414/Audun-Coffee-Drip-No-1-%3E75Procent-Rwanda-Kopakama-1Kg':
+                    continue
+                else:
                     self.driver.get(link)
+                    print(link)
                 img_url, price, description, coffee_details = self._get_coffee_details()
 
-                if '.png' in img_url:
-                    ext = 'png'
-                else:
-                    ext = 'jpg'
-                idx = idx+240
-                self._download_file(img_url, f'data/pictures/c2/kawa_{idx}.{ext}')
+                # if '.png' in img_url:
+                #     ext = 'png'
+                # else:
+                #     ext = 'jpg'
+                
+                
+                # self._download_file(img_url, f'data/pictures/c2/kawa_{link}.{ext}')
 
                 detail = {
                     'unique_id' : link,
@@ -79,8 +87,8 @@ class CoffeeScraper2:
 
                 details.append(detail)
 
-            with open('data/data_pl_test.json', 'w') as f:
-                json.dump(details, f, indent=4)
+            with open('data/data_pl_test.json', 'a+') as f:
+                    json.dump(details, f, indent=4)
 
 
     def scroll(self, x=0, y=10000):
