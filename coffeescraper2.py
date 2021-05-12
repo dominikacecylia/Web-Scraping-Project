@@ -14,7 +14,7 @@ class CoffeeScraper2:
         self.driver = webdriver.Chrome()
         self.already_visited_links = [] 
         
-        with open('data/data_pl_coffee.json', 'r', encoding='utf-8') as json_file:
+        with open('data/data_pl_test.json', 'r', encoding='utf-8') as json_file:
             data_dicts = json.load(json_file)
         self.already_visited_links = [dd['unique_id'] for dd in data_dicts] 
         
@@ -35,17 +35,20 @@ class CoffeeScraper2:
         return img_url, price, description, coffee_details
 
     def scrape(self):
-        # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/0/','https://www.coffeedesk.pl/kawa/filters/on-page/120/1/') 
-        urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/2/','https://www.coffeedesk.pl/kawa/filters/on-page/120/3/')
-        # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/4/','https://www.coffeedesk.pl/kawa/filters/on-page/120/5/')
-        # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/6/','https://www.coffeedesk.pl/kawa/filters/on-page/120/7/')
-        for url in urls:
-            self.search(url)
+        # urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/0/','https://www.coffeedesk.pl/kawa/filters/on-page/120/1/')
+        urls = ('https://www.coffeedesk.pl/kawa/filters/on-page/120/2/','https://www.coffeedesk.pl/kawa/filters/on-page/120/3/',
+        'https://www.coffeedesk.pl/kawa/filters/on-page/120/4/','https://www.coffeedesk.pl/kawa/filters/on-page/120/5/',
+        'https://www.coffeedesk.pl/kawa/filters/on-page/120/6/','https://www.coffeedesk.pl/kawa/filters/on-page/120/7/')
+
+        for url in urls: #TODO: redo the links and urls as this is the duplicate source
+            
+            if url != 'https://www.coffeedesk.pl/product/17414/Audun-Coffee-Drip-No-1-%3E75Procent-Rwanda-Kopakama-1Kg': # TODO: remove this link from urls
+                self.search(url)
 
             coffees = self.driver.find_elements_by_xpath('//div[@class="products-list"]//a')
             print(len(coffees))
 
-            links = [coffee.get_attribute('href') for coffee in coffees ]                
+            links = [coffee.get_attribute('href') for coffee in coffees]                 
 
             details = []
             for idx, link in enumerate(links):
@@ -55,7 +58,8 @@ class CoffeeScraper2:
                 else:
                     self.already_visited_links.append(link)
                 
-                self.driver.get(link)
+                if link != 'https://www.coffeedesk.pl/product/17414/Audun-Coffee-Drip-No-1-%3E75Procent-Rwanda-Kopakama-1Kg':
+                    self.driver.get(link)
                 img_url, price, description, coffee_details = self._get_coffee_details()
 
                 if '.png' in img_url:
@@ -69,13 +73,13 @@ class CoffeeScraper2:
                     'unique_id' : link,
                     'img_url' : img_url,
                     'price' : price,
-                    'weight' : coffee_details['Opakowanie'],
-                    'coffee_details' : coffee_details, # TODO: manipulate the dictionary to get the kv pairs directly instead of dict inside dict
-                    'description' : description
+                    'description' : description,
+                    **coffee_details
                 }
+
                 details.append(detail)
 
-            with open('data/data_pl_coffee_part1_test.json', 'w') as f:
+            with open('data/data_pl_test.json', 'w') as f:
                 json.dump(details, f, indent=4)
 
 
@@ -93,13 +97,16 @@ class CoffeeScraper2:
         time.sleep(1)
     
     def _get_details_in_table(self, xpath):
-        details = self.driver.find_element_by_xpath(xpath)
-        rows = details.find_elements_by_tag_name('tr')
-        all_details = {}
-        for row in rows:
-            key, value = [e.text for e in row.find_elements_by_tag_name('td')] # TODO: try prints, try doule nesting maybe, and have try and catch
-            all_details[key] = value
-        return all_details
+        try:
+            details = self.driver.find_element_by_xpath(xpath)
+            rows = details.find_elements_by_tag_name('tr')
+            all_details = {}
+            for row in rows:
+                key, value = [e.text for e in row.find_elements_by_tag_name('td')] # TODO: try prints, try doule nesting maybe
+                all_details[key] = value
+            return all_details
+        except Exception:
+            return {'Empty' : None}
 
 
 
