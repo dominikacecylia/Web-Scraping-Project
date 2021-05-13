@@ -9,11 +9,11 @@ class CoffeeScraper2:
         self.already_visited_links = []
         
         try:
-            with open('data/data_pl_test.json', 'r', encoding='utf-8') as json_file:
+            with open('data/data_pl_coffee_all', 'r', encoding='utf-8') as json_file:
                 data_dicts = json.load(json_file)
             self.already_visited_links = [dd['unique_id'] for dd in data_dicts]
         except Exception:
-            continue
+            pass
 
     def search(self, url):
         self.driver.get(url)
