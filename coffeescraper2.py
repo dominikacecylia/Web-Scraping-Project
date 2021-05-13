@@ -1,7 +1,5 @@
 from selenium import webdriver
-from pprint import pprint
 import json
-import requests
 import time
 
 class CoffeeScraper2:
