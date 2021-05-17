@@ -2,7 +2,7 @@ from selenium import webdriver
 import json
 import time
 
-class CoffeeScraper2:
+class CoffeeScraper:
     
     def __init__(self):
         self.driver = webdriver.Chrome()
@@ -84,5 +84,5 @@ class CoffeeScraper2:
             return {'Empty' : None}
             
 
-scraper2 = CoffeeScraper2()
+scraper2 = CoffeeScraper()
 scraper2.scrape()
